@@ -1,4 +1,4 @@
-root {
+:root {
     --white: hsl(0, 0%, 100%);
     --stone-100: hsl(30, 54%, 90%);
     --stone-150: hsl(30, 18%, 87%);
@@ -14,36 +14,111 @@ html {
 }
 
 body {
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    background-color: var(--stone-150);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-self: center;
     justify-content: center;
-    
+    margin: 0;
+    font-family: 'Outfit';
+    color: var(--stone-600);
 }
 
 main {
     font-size: 1.4rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    width: 70rem;
+    justify-content: center;
+}
+
+ h1, h2 {
+    font-family: 'Young Serif';
+ }
+
+ h1 {
+    font-size: 3.2rem;
+    color: var(--stone-900);
+    margin: 2rem 0;
+ }
+
+ h2 {
+    font-size: 2.4rem;
+    color: var(--brown);
+ }
+
+ h3 {
+    font-size: 1.6rem;
+    color: var(--rose-800);
+ }
+
+ p {
+    line-height: 2.2rem;
+ }
+
+ ul, ol {
+    padding: 0 1rem;
+ }
+
+ li {
+    margin: 1rem 1rem;
+ }
+
+ li::marker, ol::marker {
+    color: var(--rose-800);
+    font-weight: bold;
+ }
+
+ li p {
+    position: relative;
+    left: 1rem;
+ }
+
+ img {
+    width: 30rem;
+}
+
+hr {
+    margin: 3rem 0;
+    color: var(--stone-100);
+}
+
+table {
+    display: flex;
+    justify-content: center;
+}
+
+td:nth-child(2) {
+    color: var(--brown);
+    font-weight: bold;
 }
 
 .card {
-    margin: 10rem;
+    background-color: var(--white);
+    width: 100%;
+    padding: 3rem;
 }
 
-img {
-    width: 70rem;
+.intro p {
+    padding-bottom: 1rem;
+}
+
+.prep-card {
+    background-color: var(--rose-50);
+    padding: 1rem 3rem;
+    border-radius: 1rem;
 }
 
 .attribution { 
     font-size: 1.1rem; 
     text-align: center; 
+    margin: 1rem;
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        width: 50em;
+    }
 }
