@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    background-color: var(--stone-150);
+    background-color: var(--stone-100);
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -38,7 +38,7 @@ main {
  h1 {
     font-size: 3.2rem;
     color: var(--stone-900);
-    margin: 2rem 0;
+    margin: 0;
  }
 
  h2 {
@@ -47,7 +47,7 @@ main {
  }
 
  h3 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: var(--rose-800);
  }
 
@@ -74,17 +74,30 @@ main {
  }
 
  img {
-    width: 30rem;
+    width: 100%;
+    border-radius: 0;
 }
 
 hr {
     margin: 3rem 0;
-    color: var(--stone-100);
+    border: 0.1rem solid var(--stone-150);
 }
 
 table {
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: 0.1rem solid var(--stone-150);
+}
+
+tr:last-child {
+    border: none;
+}
+
+td {
+    padding: 1rem 2rem;
 }
 
 td:nth-child(2) {
@@ -95,11 +108,20 @@ td:nth-child(2) {
 .card {
     background-color: var(--white);
     width: 100%;
+    border-radius: 1rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
     padding: 3rem;
 }
 
-.intro p {
-    padding-bottom: 1rem;
+.intro-p {
+    padding: 1rem 0;
 }
 
 .prep-card {
@@ -111,14 +133,21 @@ td:nth-child(2) {
 .attribution { 
     font-size: 1.1rem; 
     text-align: center; 
-    margin: 1rem;
+    margin-bottom: 3rem;
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
 }
 
 @media screen and (min-width: 768px) {
+    img {
+        border-radius: 1em;
+        width: 90%;
+        margin-top: 2em;
+    }
+
     .card {
         width: 50em;
+        margin: 7em;
     }
 }
